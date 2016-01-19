@@ -32,9 +32,11 @@ namespace ConsoleApplication3
 
             ///find login form Username field and send sbmUserName variable content (string)
             IWebElement sbmLoginUName = drv.FindElement(By.Id("authUID"));
+            sbmLoginUName.Clear();
             sbmLoginUName.SendKeys(sbmUserName);
 
             IWebElement sbmLoginUPass = drv.FindElement(By.Id("authPWD"));
+            sbmLoginUPass.Clear();
             sbmLoginUPass.SendKeys(sbmUserPass);
 
             IWebElement sbmLoginBtn = drv.FindElement(By.Id("logonButton"));
